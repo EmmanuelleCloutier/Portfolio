@@ -11,8 +11,7 @@ header nav{
     align-items: center;
     list-style-type: none;
     padding: 0 20px;
-    color: rgb(18, 48, 37);
-    
+    color: rgb(18, 48, 37);  
 }
 
 header nav ul{
@@ -107,5 +106,41 @@ div{
 
 footer{
     background: white; 
-    padding: 10px;
+    padding: 20px;
+    color: rgb(18, 48, 37);  
+    list-style-type: none;
+}
+
+footer nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0 20px;
+    color: rgb(18, 48, 37);  
+}
+
+footer nav ul{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 15px;
+}
+
+footer nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    list-style: none;
+    font-size: 15px;
+    
+}
+
+footer nav ul li :active{
+    background-color: rgb(16, 57, 61);
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    
+    
 }
