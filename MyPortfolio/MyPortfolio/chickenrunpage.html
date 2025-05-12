@@ -64,8 +64,8 @@
               </li>
               <li class="dropdown"><a href="#"><span>Unity Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">PotionRush</a></li>
-                  <li><a href="#">Manatide</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Godot Project</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -141,7 +141,7 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+              <h3>Project informations</h3>
               <ul>
                 <li><strong>For course</strong>: game prototyping </li>
                 <li><strong>Teammates</strong>: Philippe Caron - Bouchard</li>
@@ -153,7 +153,8 @@
               <h2>Catch as many chickens as you can before the timer runs out. 
               </h2>
               <p>
-              In Critter Eats, I developed a spawnpoint system to manage delivery locations. The SpawnPoint actor visually marks the area where deliveries can appear, and the SpawnManager randomly selects a spawnpoint to generate deliveries. I also added a time-limited delivery mechanic: when a delivery is picked up, it updates the player's progress, and if not collected in time, it disappears. I implemented a progress bar for each delivery, showing the time left, and updated it in real-time to help players act quickly. Additionally, I fixed a bug by disabling spawnpoint collisions that were blocking certain behaviors.    
+              I was in charge of the AI for the chickens. I used the EQS system to make them roam freely and flee from the player when detected through the AIPerception system. I implemented these behaviors using a Behavior Tree.
+              I also handled the player interaction: when a chicken is touched by the player, a point is added to the player's score in the PlayerState, and the score is then displayed on screen.
             </p>
             </div>
           </div>
