@@ -58,13 +58,13 @@
                   <li><a href="crittereatspage.html">CritterEats</a></li>
                   <li><a href="unrealislandpage.html">UnrealIsland</a></li>
                   <li><a href="chickenrunpage.html">ChickenRun</a></li>
-                  <li><a href="LeoAventure.html" class="active">LeosAventure</a></li>
+                  <li><a href="LeoAventure.html">LeosAventure</a></li>
                   <li><a href="towerofpromise.html">TowerOfPromise</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Unity Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="manatidepage.html">ManaTide</a></li>
+                  <li><a href="manatidepage.html" class="active">ManaTide</a></li>
                   <li><a href="#"></a></li>
                 </ul>
               </li>
@@ -88,11 +88,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container">
-        <h1>Leo's Aventure</h1>
+        <h1>ManaTide</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">LeoAventure</li>
+            <li class="current">ManaTide</li>
           </ol>
         </nav>
       </div>
@@ -127,16 +127,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/aventureleo/blobfish.png" alt="">
+                  <img src="assets/img/pergame/manatide/biomelangune.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/pergame/manatide/biomepave.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/pergame/manatide/breeding.png" alt="">
                 </div>
 
-                <div class="swiper-slide">
-                  <img src="assets/img/pergame/aventureleo/poisson.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/pergame/aventureleo/mouette.png" alt="">
-                </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -144,18 +143,18 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project informations</h3>
+              <h3>Project information</h3>
               <ul>
-                <li><strong>For course</strong>: game creation</li>
-                <li><strong>Teammates</strong>: Maina Bernier, Catherine Champerval, Emmy Gagnon, Heiva Martin, Samy Mercurio, Gabriel Pronovost, Shaya Seguin, Mathieu Stevens, Pierre Vanhove, Coralie Tremblay </li>
-                <li><strong>Project date</strong>: Febuary 10 2025 - March 2 2025</li>
+                <li><strong>Personal Project</strong></li>
+                <li><strong>Engine</strong>: Unity 2D</li>
+                <li><strong>Solo Project</strong></li>
+                <li><strong>Project date</strong>: May 13 2025 - Present </li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Survive waves of monstrous alien enemies during your intergalactic journey, and overcome each level to progress in an adventure full of dangers and challenges.</h2>
-              <p>
-             This project is a game pitch I developed in collaboration with a team of programmers and artists during a game creation sprint as part of my game development course even though the idea was not selected I am proud of the concept we created and of my contribution to the gameplay I was in charge of enemy logic and designed three types with distinct behaviors a walking fish that charges directly at the player a space seagull that circles around before striking and a cosmic blobfish that shoots meteors to make dodging more difficult I also programmed a wave system with unique behaviors for each enemy type to provide a variety of challenges and enhance the overall gameplay experience 
-            </p>
+              <h2>Mana Tide is a cozy pixel-art sim where you raise magical manatees in serene underwater lagoons</h2>
+              <p>Mana Tide is a relaxing pixel art simulation game where players raise a growing colony of manatees in magical underwater lagoons. Inspired by My Singing Monsters, the game focuses on relaxation, exploration, and the natural beauty of the ocean, blending casual breeding mechanics with soft interaction and ambient storytelling.
+              </p>
             </div>
           </div>
 
@@ -164,6 +163,52 @@
       </div>
 
     </section><!-- /Portfolio Details Section -->
+
+     <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tasks</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <h3>UI Responsibilities</h3>
+              <p>Handle all user interactions related to clicking and feedback:
+Manatee Interaction: When a manatee is clicked, display an info panel with options to feed or delete.
+Shop System: Manage user clicks in shops for purchasing biomes, manatees, and food.
+Resource Clicks: Handle interactions with food or currency icons to show information or trigger relevant actions.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>Biome & Manatee Management</h3>
+              <p>Biome Transfers: When a manatee is moved to another biome, ensure the save/load system works correctly.
+Manatee Spawning: Manatees should spawn depending on the selected biome, with randomly generated names.
+Leveling System: When fed, manatees should gain experience and level up progressively.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <h3>Breeding Center Logic</h3>
+              <p>Ensure the breeding feature functions as expected:
+Players must select exactly two manatees before confirming a breeding action.
+Once confirmed, the system should validate the selection, process the breeding cost, and generate the new manatee accordingly.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
 
   </main>
 
