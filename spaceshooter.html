@@ -58,8 +58,8 @@
                   <li><a href="crittereatspage.html">CritterEats</a></li>
                   <li><a href="chickenrunpage.html">ChickenRun</a></li>
                   <li><a href="LeoAventure.html">LeosAventure</a></li>
-                  <li><a href="towerofpromise.html" class="active">TowerOfPromise</a></li>
-                  <li><a href="spaceshooter.html">SpaceShooter</a></li>
+                  <li><a href="towerofpromise.html">TowerOfPromise</a></li>
+                   <li><a href="spaceshooter.html"class="active">SpaceShooter</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Unity Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -88,11 +88,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container">
-        <h1>Tower Of Promise</h1>
+        <h1>SpaceShooter</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Tower of Promise</li>
+            <li class="current">SpaceShooter</li>
           </ol>
         </nav>
       </div>
@@ -127,15 +127,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/towerofpromise/eau.png" alt="">
+                  <img src="assets/img/pergame/spaceshooter/babies.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/towerofpromise/liquide.png" alt="">
+                  <img src="assets/img/pergame/spaceshooter/cube.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/towerofpromise/gazeux.png " alt="">
+                  <img src="assets/img/pergame/spaceshooter/powerup.png" alt="">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -146,16 +146,17 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project informations</h3>
               <ul>
-                <li><strong>For course</strong>: game creation</li>
-                 <li><strong>Engine</strong>: Unreal Engine Blueprints</li>
-                <li><strong>Teammates</strong>: Maina Bernier, Jean-Felix Coté, David Cyr - Pinsonnault, Emmy Gagnon, Lorik Gauthier, William Guilbault, Shola Norris Hounkpe, Olivier Pagé</li>
-                <li><strong>Project date</strong>: Januray 13 2025 - Febuary 8 2025</li>
+                <li><strong>For course</strong>: mini projects</li>
+                 <li><strong>Engine</strong>: Unreal Engine C++</li>
+                <li><strong>Solo Project</strong></li>
+                <li><strong>Project date</strong>: September 2 2025 to September 28 2025 </li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Strategy and speed, run and innovate with your automaton!</h2>
+              <h2>prototype developed in Unreal Engine to demonstrate gameplay mechanics, version control skills, and integration of C++ with Blueprints.</h2>
               <p>
-            Despite these compromises, the core gameplay logic is fully functional, and the prototype effectively conveys the main idea of our pitch.
+              This project is a prototype of a Space Shooter game developed with Unreal Engine.
+              It was created as part of an assignment to practice version control with GitHub and Perforce Helix Core, while implementing core gameplay mechanics using both C++ and Blueprints.
             </p>
             </div>
           </div>
@@ -180,14 +181,14 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>Companion State Mechanics</h3>
-              <p>I developed the companion’s unique ability to switch between three states—solid, liquid, and gas—based on player input. Each state provides distinct gameplay effects: as a solid, the companion acts as a platform; as a gas, it lifts the player upward; and as a liquid, it slows the player’s fall to prevent fatal drops. </p>
+              <h3>Player Ship</h3>
+              <p>The player controls a fully visible ship capable of moving in all directions. The ship can shoot projectiles to destroy incoming asteroids, creating dynamic gameplay.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <h3>Physical Interactions and Respawn</h3>
+              <h3>Asteroids</h3>
               <p>I handled the physical interactions, including collision detection, and implemented a respawn system to bring the companion back after the player dies, maintaining smooth gameplay flow. </p>
             </div>
             </div><!-- End Service Item -->
@@ -195,7 +196,15 @@
              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <h3>Adapted Movement System</h3>
-              <p>Due to time constraints, we couldn’t complete animations and the arrival system. We adapted by making the companion either follow the player closely or teleport to them if they get too far apart, ensuring the mechanic still works seamlessly.</p>
+              <p>Asteroids spawn randomly along the edges of the screen and move with random forces, sometimes heading toward the player. Each asteroid requires multiple hits to be destroyed and deals damage upon collision, adding challenge and variety.
+              </p>
+            </div>
+            </div><!-- End Service Item -->
+
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>UI & Visuals</h3>
+              <p>The game features a HUD displaying score and remaining lives. Visual effects are included for shooting and asteroid destruction to enhance player immersion.</p>
             </div>
             </div><!-- End Service Item -->
 
