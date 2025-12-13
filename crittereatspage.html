@@ -201,33 +201,84 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>Delivery Spawn System</h3>
-              <p>In Critter Eats, I created a spawnpoint system to manage delivery locations throughout the map. Each SpawnPoint actor visually indicates a valid area where deliveries can appear. A central SpawnManager handles delivery spawning by randomly selecting one of these points, ensuring variety and replayability.
-                  </p>
+              <h3>Spawn Points</h3>
+              <p>I created Spawn Points, simple actors with a static mesh and no collisions, placed in the scene by the level designer. These points determine where deliveries appear. The Spawn Manager selects a point from a subset of the list to spawn each delivery, avoiding overuse of the same locations. </p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <h3>Time-Limited Deliveries</h3>
-              <p>To add challenge and urgency, I implemented a time-based delivery mechanic. When a delivery is spawned and picked up by the player, it contributes to their progress. If it’s not collected in time, it automatically disappears, encouraging players to act quickly and plan efficiently 
-              </p>
+              <h3>Spawn Manager</h3>
+              <p>The Spawn Manager handles all delivery spawning. At the start of the game, it collects all Spawn Points in the scene and randomly chooses one from half of the available points. When a player reaches a delivery or a timer expires, a new delivery spawns at a different point. The manager also tracks the player’s score, adding or subtracting points depending on delivery success or failure.</p>
             </div>
-
           </div><!-- End Service Item -->
-             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300
+             ">
             <div class="service-item position-relative">
-              <h3>Real-Time Progress Feedback</h3>
-              <p>Each delivery comes with its own progress bar, visually indicating the remaining time before expiration. I updated these progress bars in real time, giving players clear feedback and enhancing the overall pacing of the game.
+              <h3>Deliveries</h3>
+              <p>Deliveries appear at a Spawn Point chosen by the Spawn Manager. When collected by the player, they disappear. Each delivery has a timer; if not collected in time, it despawns. Deliveries are also linked to a Waypoint, which indicates their position on the screen and helps the player locate them.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400
+             ">
+            <div class="service-item position-relative">
+              <h3>Waypoints</h3>
+              <p>I developed an Actor Component to manage waypoints. It checks if the player can see the delivery directly. If it goes off-screen, an indicator appears, showing the direction of the delivery and the remaining time. The indicator dynamically updates according to the delivery’s position in the world.
               </p>
             </div>
-
           </div><!-- End Service Item -->
-             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <h3>TutoSteps</h3>
+              <p>TutoSteps are simple actors used to mark the player’s position in the tutorial and trigger progression based on their index.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+           
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <h3>Tutorial Deliveries</h3>
+              <p>Deliveries in the tutorial behave differently: if the timer expires, they respawn at the same location to prevent blocking player progression.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+           
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-item position-relative">
+              <h3>Boss</h3>
+              <p>The boss has a structured dialogue system based on multiple arrays of strings: two for the tutorial, one in the hub after level 1, and one in level 2. Each line appears in the UI and progresses only when the player presses the A button on the controller. The logic is intentionally simple and reliable, advancing line by line manually.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-item position-relative">
+              <h3>Hub</h3>
+              <p>In the hub, I reused the same narrative logic as in the tutorial. Once a sequence finishes, it does not repeat unless the player quits and restarts the game.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+           
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
+            <div class="service-item position-relative">
+              <h3>Time-Limited Deliveries & Progress Feedback</h3>
+              <p>To add challenge, I implemented a time-based delivery mechanic. Each delivery contributes to the player’s progress when collected and disappears if not picked up in time, encouraging quick action. Progress bars update in real time, giving clear feedback and enhancing pacing.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+           
+             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000">
             <div class="service-item position-relative">
               <h3>Collision Bug Fix</h3>
-              <p>During testing, I identified and fixed a bug where spawnpoint collisions were interfering with gameplay. By disabling these collisions, I ensured that delivery spawning and player movement were no longer blocked by invisible objects.
-
+              <p>During testing, I fixed a bug where spawn point collisions interfered with gameplay. Disabling these collisions ensured delivery spawning and player movement were no longer blocked.
               </p>
             </div>
           </div><!-- End Service Item -->
