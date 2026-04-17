@@ -55,18 +55,17 @@
             <ul>
               <li class="dropdown"><a href="#"><span>Unreal Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="crittereatspage.html">CritterEats</a></li>   
-                  <li><a href="cozychessupage.html" class="active">CozyChessu</a></li>             
+                  <li><a href="crittereatspage.html">CritterEats</a></li>
+                 <li><a href="cozychessupage.html">CozyChessu</a></li>
                   <li><a href="chickenrunpage.html">ChickenRun</a></li>
                   <li><a href="LeoAventure.html">LeosAventure</a></li>
                   <li><a href="towerofpromise.html">TowerOfPromise</a></li>
-                  <li><a href="bombermine.html">BomberMine</a></li>
-               
+                  <li><a href="bombermine.html" class="active">BomberMine</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Unity Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                 <li><a href="manatidepage.html">ManaTide</a></li>
+                  <li><a href="manatidepage.html">ManaTide</a></li>
                   <li><a href="#"></a></li>
                 </ul>
               </li>
@@ -90,11 +89,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container">
-        <h1>CozyChessu</h1>
+        <h1>BomberMine</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">CozyChessu</li>
+            <li class="current">BomberMine</li>
           </ol>
         </nav>
       </div>
@@ -129,27 +128,11 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/lobby.png" alt="">
+                  <img src="assets/img/pergame/bombermine/bomberminephoto1.png" alt="">
                 </div>
 
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/deckinventory.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/prematch.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/ingame.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/ingamelater.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/checkmate.png" alt="">
+                <div class="swiper-slide">
+                  <img src="assets/img/pergame/bombermine/bomberminephoto2.png" alt="">
                 </div>
 
               </div>
@@ -161,17 +144,19 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project informations</h3>
               <ul>
-                <li><strong>For work</strong>: All in Tactic Studio</li>
-                 <li><strong>Engine</strong>: Unreal Engine Blueprints</li>
-                <li><strong>Project date</strong>: June 1 2025 -  Present</li>
-                <li><strong>Steam page</strong>: <a href="https://store.steampowered.com/app/3974990/Cozy_Chessu/?beta=0">steam/cozychessu</a></li>
+                <li><strong>Project prepared for the Ubisoft Lab Competition 2026.</strong></li>
+                <li><strong>Engine</strong>: Unreal Engine C++ </li>
+                <li><strong>Teammates</strong>: Bastien Gadoury, Léonard Lemoosy, Romain Mousty, Estevan Schmitt, Mark - Antoyne Fleury, Jean - Oliver Houle, Nixon Aldayr Antury Nino, Jack Gruber </li>
+                <li><strong>Project date</strong>: January 12 2026 - January 23 2026 </li>
+                <li><strong>Project URL</strong>: <a href="https://estevanschmitt.itch.io/bombermine ">itch.io/Bombermine</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Play a reimagined game of chess, complete cozy challenges, and build relationships with customers in a warm izakaya.
+              <h2>Your goal is to be the last survivor in every round. 
               </h2>
               <p>
-              A cozy, story-driven chess game set in a cute izakaya, where special cards twist the rules and every match brings you closer to your customers.</p>
+             BomberMine is a multiplayer online game inspired by Bomberman, featuring customizable settings that allow each match to feel unique.
+            </p>
             </div>
           </div>
 
@@ -181,7 +166,7 @@
 
     </section><!-- /Portfolio Details Section -->
 
-          <!-- Services Section -->
+      <!-- Services Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
@@ -195,69 +180,50 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>UIs</h3>
-              <p>The UI was implemented using a modular system to support modified chess mechanics, special card logic, customer interactions and restaurant progression, with a focus on clarity, reusability and smooth in-game transitions.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>AI Chess – Architecture</h3>
-              <p>A hybrid chess + ability-card AI built with a clear separation of concerns. A Chess Brain evaluates pure chess positions, an Ability Brain handles card timing and impact and a personality layer introduces risk and human-like imperfection. All decisions are centralized in a Blueprint-based AIChessController.
+              <h3>Gameplay Programming</h3>
+              <p>I implemented core gameplay systems, including player death logic and round-based win and loss conditions. I also refined match flow by fixing edge cases related to victory conditions, ensuring a smooth and consistent gameplay experience from start to finish.
               </p>
             </div>
           </div><!-- End Service Item -->
 
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>AI Chess Decision Making</h3>
-              <p>Each turn, the AI compares playing a chess move, an ability card or both. Options are scored based on board state, opponent pressure, Soul Points economy and risk, with controlled randomness added to keep the AI unpredictable and fun to play against.
-               </p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>Combat Systems & Mechanics</h3>
+              <p>I worked on key combat mechanics, particularly around the bomb system in a multiplayer context. This included handling interactions such as player death, shield power-ups, and ensuring consistent behavior across clients. I also integrated explosion sound effects to enhance feedback and immersion.
+              </p>
             </div>
           </div><!-- End Service Item -->
 
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Background NPC System</h3>
-              <p>The Background NPC system is designed to make the restaurant feel alive rather than static. NPCs feature visual variations, arrive solo or in groups, follow natural meal cycles (arrival, seating, eating, leaving), use different tables, and play contextual animations with ambient chatter. Behavioral randomness, satisfaction levels, dynamic density control, overflow handling, and special events (VIPs, large groups) ensure the environment reacts to player actions and narrative beats, creating a believable and immersive social space.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>Multiplayer Networking</h3>
+              <p>I contributed to stabilizing and improving multiplayer synchronization. This involved fixing issues related to client-side spawning (floor tiles and blocks) and ensuring that critical events, like player death, were correctly replicated and visible across the network.
+              </p>
             </div>
           </div><!-- End Service Item -->
 
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Basic Tycoon System</h3>
-              <p>The basic Tycoon system establishes the foundation for an Izakaya-style management loop. It uses a fixed Overcooked-style top-down camera with mouse-only interactions, placeholder meshes (tables, kitchen, NPCs), and simple click-based logic. NPCs are spawned, move toward tables, and display randomized requests through a thought bubble UI. A minimal HUD tracks score and happy customers in real time, updating as NPCs are successfully seated. </p>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>Bug Fixing & Optimization</h3>
+              <p>I resolved several gameplay and visual bugs, including issues with object destruction after death and inconsistencies in visual feedback such as color states. These fixes improved both the reliability and clarity of the gameplay experience.
+              </p>
             </div>
           </div><!-- End Service Item -->
 
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Ability Cards System</h3>
-              <p>Ability Cards expand classic chess by introducing disruption, information control, movement manipulation, and risk-based mechanics. I implemented a large portion of the Card Manager system, handling card logic, game-state effects, deck/hand flow, and integration with the core chess rules to support dynamic and unpredictable gameplay. </p>
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>Build & Integration</h3>
+              <p>I prepared the project for builds and integrated background music into the game, contributing to a more polished and complete final product.
+              </p>
             </div>
           </div><!-- End Service Item -->
-
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Ability Cards System</h3>
-              <p>Ability Cards expand classic chess by introducing disruption, information control, movement manipulation, and risk-based mechanics. I implemented a large portion of the Card Manager system, handling card logic, game-state effects, deck/hand flow, and integration with the core chess rules to support dynamic and unpredictable gameplay. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Card Driven Chess Movement System</h3>
-              <p>I implemented a modular chess movement system where rooks, bishops, knights, and queens require specific movement cards to move. Built using strong object-oriented principles, the system cleanly separates piece logic, movement rules, and validation, making it easy to extend, debug, and integrate with the Ability Cards and Card Manager systems. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          
 
         </div>
 
       </div>
 
     </section><!-- /Services Section -->
+
   </main>
 
 

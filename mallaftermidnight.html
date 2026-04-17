@@ -55,18 +55,18 @@
             <ul>
               <li class="dropdown"><a href="#"><span>Unreal Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="crittereatspage.html">CritterEats</a></li>   
-                  <li><a href="cozychessupage.html" class="active">CozyChessu</a></li>             
-                  <li><a href="chickenrunpage.html">ChickenRun</a></li>
+                  <li><a href="crittereatspage.html">CritterEats</a></li>
+                 <li><a href="cozychessupage.html">CozyChessu</a></li>
+                  <li><a href="chickenrunpage.html" class="active">ChickenRun</a></li>
                   <li><a href="LeoAventure.html">LeosAventure</a></li>
                   <li><a href="towerofpromise.html">TowerOfPromise</a></li>
+                  <li><a href="spaceshooter.html">SpaceShooter</a></li>
                   <li><a href="bombermine.html">BomberMine</a></li>
-               
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Unity Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                 <li><a href="manatidepage.html">ManaTide</a></li>
+                  <li><a href="manatidepage.html">ManaTide</a></li>
                   <li><a href="#"></a></li>
                 </ul>
               </li>
@@ -90,11 +90,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container">
-        <h1>CozyChessu</h1>
+        <h1>Chicken Run</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">CozyChessu</li>
+            <li class="current">Chicken Run</li>
           </ol>
         </nav>
       </div>
@@ -129,27 +129,11 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/lobby.png" alt="">
+                  <img src="assets/img/pergame/chickenrun/gameplay.png" alt="">
                 </div>
 
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/deckinventory.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/prematch.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/ingame.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/ingamelater.png" alt="">
-                </div>
-
-                 <div class="swiper-slide">
-                  <img src="assets/img/pergame/cozychessu/checkmate.png" alt="">
+                <div class="swiper-slide">
+                  <img src="assets/img/pergame/chickenrun/modelmap.png" alt="">
                 </div>
 
               </div>
@@ -161,17 +145,19 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project informations</h3>
               <ul>
-                <li><strong>For work</strong>: All in Tactic Studio</li>
-                 <li><strong>Engine</strong>: Unreal Engine Blueprints</li>
-                <li><strong>Project date</strong>: June 1 2025 -  Present</li>
-                <li><strong>Steam page</strong>: <a href="https://store.steampowered.com/app/3974990/Cozy_Chessu/?beta=0">steam/cozychessu</a></li>
+                <li><strong>For course</strong>: game prototyping </li>
+                <li><strong>Engine</strong>: Unreal Engine C++ </li>
+                <li><strong>Teammates</strong>: Philippe Caron - Bouchard</li>
+                <li><strong>Project date</strong>: January 8 2025 - Febuary 18 2025</li>
+                <li><strong>Project URL</strong>: <a href="https://larebelleuse55.itch.io/chickenrun">itch.io/chickenrun</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Play a reimagined game of chess, complete cozy challenges, and build relationships with customers in a warm izakaya.
+              <h2>Catch as many chickens as you can before the timer runs out. 
               </h2>
               <p>
-              A cozy, story-driven chess game set in a cute izakaya, where special cards twist the rules and every match brings you closer to your customers.</p>
+              Chicken Run is an action and puzzle game set in a rural and humorous environment. Within a fenced enclosure, the player is tasked with catching as many chickens as possible before time runs out. This casual action game, featuring elements of artificial intelligence, is designed to be easy to pick up, yet challenging enough to keep players engaged.
+            </p>
             </div>
           </div>
 
@@ -181,7 +167,7 @@
 
     </section><!-- /Portfolio Details Section -->
 
-          <!-- Services Section -->
+      <!-- Services Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
@@ -195,69 +181,26 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>UIs</h3>
-              <p>The UI was implemented using a modular system to support modified chess mechanics, special card logic, customer interactions and restaurant progression, with a focus on clarity, reusability and smooth in-game transitions.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>AI Chess – Architecture</h3>
-              <p>A hybrid chess + ability-card AI built with a clear separation of concerns. A Chess Brain evaluates pure chess positions, an Ability Brain handles card timing and impact and a personality layer introduces risk and human-like imperfection. All decisions are centralized in a Blueprint-based AIChessController.
+              <h3>Chicken AI Behavior</h3>
+              <p>I designed the AI for the chickens using Unreal Engine’s Environment Query System (EQS) to let them roam freely. When the player is detected through the AI Perception system, the chickens automatically flee. These behaviors are organized and executed using a Behavior Tree to ensure responsive and believable movement.
               </p>
             </div>
           </div><!-- End Service Item -->
 
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>AI Chess Decision Making</h3>
-              <p>Each turn, the AI compares playing a chess move, an ability card or both. Options are scored based on board state, opponent pressure, Soul Points economy and risk, with controlled randomness added to keep the AI unpredictable and fun to play against.
-               </p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h3>Player Interaction and Scoring</h3>
+              <p>I also handled the player interaction system. When a chicken is touched by the player, one point is added to the player's score, which is stored in the PlayerState. The updated score is then displayed instantly on the screen through the user interface.
+              </p>
             </div>
           </div><!-- End Service Item -->
-
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Background NPC System</h3>
-              <p>The Background NPC system is designed to make the restaurant feel alive rather than static. NPCs feature visual variations, arrive solo or in groups, follow natural meal cycles (arrival, seating, eating, leaving), use different tables, and play contextual animations with ambient chatter. Behavioral randomness, satisfaction levels, dynamic density control, overflow handling, and special events (VIPs, large groups) ensure the environment reacts to player actions and narrative beats, creating a believable and immersive social space.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Basic Tycoon System</h3>
-              <p>The basic Tycoon system establishes the foundation for an Izakaya-style management loop. It uses a fixed Overcooked-style top-down camera with mouse-only interactions, placeholder meshes (tables, kitchen, NPCs), and simple click-based logic. NPCs are spawned, move toward tables, and display randomized requests through a thought bubble UI. A minimal HUD tracks score and happy customers in real time, updating as NPCs are successfully seated. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Ability Cards System</h3>
-              <p>Ability Cards expand classic chess by introducing disruption, information control, movement manipulation, and risk-based mechanics. I implemented a large portion of the Card Manager system, handling card logic, game-state effects, deck/hand flow, and integration with the core chess rules to support dynamic and unpredictable gameplay. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Ability Cards System</h3>
-              <p>Ability Cards expand classic chess by introducing disruption, information control, movement manipulation, and risk-based mechanics. I implemented a large portion of the Card Manager system, handling card logic, game-state effects, deck/hand flow, and integration with the core chess rules to support dynamic and unpredictable gameplay. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <h3>Card Driven Chess Movement System</h3>
-              <p>I implemented a modular chess movement system where rooks, bishops, knights, and queens require specific movement cards to move. Built using strong object-oriented principles, the system cleanly separates piece logic, movement rules, and validation, making it easy to extend, debug, and integrate with the Ability Cards and Card Manager systems. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          
 
         </div>
 
       </div>
 
     </section><!-- /Services Section -->
+
   </main>
 
 
