@@ -238,24 +238,29 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>UIs</h3>
-              <p>The UI was implemented using a modular system to support modified chess mechanics, special card logic, customer interactions and restaurant progression, with a focus on clarity, reusability and smooth in-game transitions.</p>
+              <h3>UI Game Mode</h3>
+              <p>Chessu uses two main game modes: Game Mode (chess gameplay) and UI Game Mode (menus and interface screens). The UI Game Mode can be called from anywhere in the game, making it easy to switch between different UI screens. These include the Lobby, Deck Inventory, Settings, Pre-Match, Post-Match, Story Log, and Dialogue.
+Each UI screen is placed in its own viewport. Instead of constantly removing and adding UI elements, the player simply moves between viewports to access the desired screen. This approach keeps the UI organized, simplifies navigation, and makes transitions between screens faster and easier to manage.
+</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>AI Chess – Architecture</h3>
-              <p>A hybrid chess + ability-card AI built with a clear separation of concerns. A Chess Brain evaluates pure chess positions, an Ability Brain handles card timing and impact and a personality layer introduces risk and human-like imperfection. All decisions are centralized in a Blueprint-based AIChessController.
+              <h3>Dialogue</h3>
+              <p>Each story has its own background image and dialogue script. The system progresses through each line, updating the dialogue box, character portrait, and character name accordingly. When the player selects a story, they are moved to the Dialogue viewport, where these elements are updated based on the current dialogue. Once the story is completed, the player is automatically returned to the Story Log.
+The button used to access the story is temporary. Once the Narrative System is fully implemented, it will be reorganized to support the complete story flow.
+
               </p>
             </div>
           </div><!-- End Service Item -->
 
            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>AI Chess Decision Making</h3>
-              <p>Each turn, the AI compares playing a chess move, an ability card or both. Options are scored based on board state, opponent pressure, Soul Points economy and risk, with controlled randomness added to keep the AI unpredictable and fun to play against.
-               </p>
+              <h3>Ability Card Effects</h3>
+              <p>BPAbilityCardEffects is an extension of BPCardManager responsible for creating and removing the visual assets and effects associated with Ability Cards. It can receive instructions from BPCardManager, the Chessboard, or individual pieces.
+For example, it can create visual elements such as banners or other assets required by an Ability Card. This keeps the creation and removal of card-related effects separate from the main card management logic.
+ </p>
             </div>
           </div><!-- End Service Item -->
 
@@ -268,29 +273,49 @@
 
            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>Basic Tycoon System</h3>
-              <p>The basic Tycoon system establishes the foundation for an Izakaya-style management loop. It uses a fixed Overcooked-style top-down camera with mouse-only interactions, placeholder meshes (tables, kitchen, NPCs), and simple click-based logic. NPCs are spawned, move toward tables, and display randomized requests through a thought bubble UI. A minimal HUD tracks score and happy customers in real time, updating as NPCs are successfully seated. </p>
+              <h3>Temporary Effects</h3>
+              <p>Some Ability Cards create effects that remain active for a specific number of turns. The object affected by the ability, such as the Chessboard or a chess piece, manages the timer by binding a delegate to itself.
+Once the timer expires, the delegate calls BPAbilityCardEffects to remove the corresponding asset or effect. BPAbilityCardEffects then removes the effect and unbinds the delegate, ensuring that temporary effects are properly cleaned up.
+ </p>
             </div>
           </div><!-- End Service Item -->
 
                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>Ability Cards System</h3>
-              <p>Ability Cards expand classic chess by introducing disruption, information control, movement manipulation, and risk-based mechanics. I implemented a large portion of the Card Manager system, handling card logic, game-state effects, deck/hand flow, and integration with the core chess rules to support dynamic and unpredictable gameplay. </p>
+              <h3>Card Management</h3>
+              <p>BPCardManager is responsible for managing all card-related logic. When a card is played, it first determines whether it is a Movement Card or an Ability Card and identifies the specific card being used. BPCardManager acts as a central manager rather than a subsystem because Unreal’s Blueprint Template does not allow us to compile a subsystem. The goal is to keep all card-related information and logic in one place, including the card data defined in Struct_Cards, such as the card name, Texture2D, and other properties.
+When a card is played, BPCardManager determines where its effect needs to be handled. Effects that directly affect cards are executed by BPCardManager itself, while effects that affect the board are passed to the Chessboard. If the effect requires a decision, such as choosing which piece to affect, the information is passed to the Player or Bot. Once a decision is made, the information is sent to the selected piece, which then executes the effect
+ </p>
             </div>
           </div><!-- End Service Item -->
 
                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>Ability Cards System</h3>
-              <p>Ability Cards expand classic chess by introducing disruption, information control, movement manipulation, and risk-based mechanics. I implemented a large portion of the Card Manager system, handling card logic, game-state effects, deck/hand flow, and integration with the core chess rules to support dynamic and unpredictable gameplay. </p>
+              <h3>Chess Piece</h3>
+              <p>BPChessPiece is the parent class for all chess pieces and contains the shared information used by its child pieces, including their PieceName and attributes. It also contains a boolean called NeedCardToMove, which determines whether a specific piece requires a card to move. Whenever a piece is selected, its information is sent to the Chessboard, including which piece was selected, its current position, and its intended destination. This allows the Chessboard to handle the movement while using the information provided by the piece to determine whether additional requirements must be met. </p>
             </div>
           </div><!-- End Service Item -->
 
                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <h3>Card Driven Chess Movement System</h3>
-              <p>I implemented a modular chess movement system where rooks, bishops, knights, and queens require specific movement cards to move. Built using strong object-oriented principles, the system cleanly separates piece logic, movement rules, and validation, making it easy to extend, debug, and integrate with the Ability Cards and Card Manager systems. </p>
+              <h3>Chessboard</h3>
+              <p>The Chessboard contains a function called VerifCard, which verifies whether the player or bot has the required card to move the selected piece. It checks the piece's PieceName and NeedCardToMove values to determine whether a card is required, then checks through BPCardManager whether the required card has already been used. If CardHasBeenUsed is true, the Chessboard highlights the pieces that can be affected by that card and prevents the player from using another card. If the selected piece requires a card, the Chessboard asks BPCardManager whether the player or bot has the required card. If the card is available, the piece can move and BPCardManager removes the card. Otherwise, the movement is prevented. </p>
+            </div>
+          </div><!-- End Service Item -->
+
+               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <h3>Narrative Progress</h3>
+              <p>We created a separate Data Table, DT_NarrativeProgress, to store all narrative variables and their current state. Its columns contain the VariableName, its State (true/false), and the NextStory. DT_NarrativeProgress is the only hard save responsible for the player's story progression. Before launching a script, BP_NarrativeManager checks the variables stored in the Ink Data Table against DT_NarrativeProgress to determine the player's current progression and build the appropriate dialogue. When BP_NarrativeManager processes a script and encounters a variable change, it updates the corresponding variable in DT_NarrativeProgress and performs a hard save.
+When BP_NarrativeManager is constructed, it retrieves the appropriate story from the current Ink Data Table, again using the variables stored in DT_NarrativeProgress to verify which story the player should access. The selected story is then sent to the W_DialogueBox, which reads and displays the dialogue line by line.
+ </p>
+            </div>
+          </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <h3>Scripts</h3>
+              <p>Each script has its own dedicated Data Table. The columns contain the Name, DialogueLine, AudioLine, and Image. Some Ink scripts only have a single version, while scripts with multiple versions are organized into their own folders. BP_NarrativeManager determines which version of the script should be used based on the player's current narrative progression.</p>
             </div>
           </div><!-- End Service Item -->
 
